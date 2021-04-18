@@ -10,10 +10,14 @@ function addAssignment() {
 }
 
 function colorAssigment(elementClicked) {
+  const elementLi = document.querySelectorAll('li');
+  for (let index = 0; index < elementLi.length; index += 1){
+    elementLi[index].classList.remove('color');
+  }
   elementClicked.target.classList.add('color');
 }
 
 elementButton.addEventListener('click', addAssignment);
 
-const elementLi = document.getElementById('lista-tarefas');
-elementLi.addEventListener('click', colorAssigment);
+const elementOl = document.getElementById('lista-tarefas');
+elementOl.addEventListener('click', colorAssigment);
