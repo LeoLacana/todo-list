@@ -20,11 +20,11 @@ function colorAssigment(elementClicked) {
   elementClicked.target.classList.add('color');
 }
 
-// Selecionando Tarefa 
+// Selecionando Tarefa
 const elementOl = document.getElementById('lista-tarefas');
 elementOl.addEventListener('click', colorAssigment);
 
-function lineThroughFunction (elementClicked){
+function lineThroughFunction(elementClicked) {
   if (elementClicked.target.classList.contains('completed')) {
     elementClicked.target.classList.remove('completed');
   } else {
